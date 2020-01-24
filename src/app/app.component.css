@@ -1,0 +1,12 @@
+table {
+    padding-right: 15px;
+}
+thead td{
+    border: 1px solid black;
+    font-weight: 900;
+    padding-left: 10px;
+    font-size: large;
+}
+tbody td {
+    text-align: center;
+}
