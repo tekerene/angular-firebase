@@ -1,0 +1,26 @@
+
+<div class="container">
+<div *ngIf="success" class="alert alert-success" role="alert">
+    message save successfully
+
+</div>
+<div *ngIf="error" class="alert alert-danger" role="alert">
+    ohhs! ... an error occured
+</div>
+
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()" >
+        <div class="form-group">
+            <label for="title">Book Title</label>
+            <input formControlName="title" type="text" id="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="authur">Book Authur</label>
+            <input formControlName="authur" type="text" id="authur" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="edition">Book Edition</label>
+            <input formControlName="edition" type="number" id="edition" class="form-control">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>

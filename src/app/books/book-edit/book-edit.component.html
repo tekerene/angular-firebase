@@ -1,0 +1,24 @@
+<p>book-edit works!</p>
+<div class="container p-5">
+    <div class="alert alert-success" *ngIf="success_update" role="alert">
+Book Successfully Updated
+    </div>
+    <div class="alert alert-danger" *ngIf="error_msg" role="alert">
+            OOOH.. an error Occur
+                </div>
+    <form [formGroup]="editBookForm" (ngSubmit)="onEdit()">
+        <div class="form-group">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" formControlName="title" class="form-control">
+        </div>
+        <div class="form-group">
+                <label for="authur">Book Authur</label>
+                <input type="text" id="authur" formControlName="authur" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="edition">Book Edition</label>
+            <input type="number" id="edition" formControlName="edition" class="form-control">
+        </div>
+        <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+</div>

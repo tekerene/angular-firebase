@@ -1,0 +1,15 @@
+<p>book-list works!</p>
+<div class="text-center mt-5">
+    <h1 class="text-mute"></h1><strong>Fetching Data...</strong> 
+    <div class="container p-5">
+        <div *ngFor="let book of books">
+            <h1>{{book.data.title}}</h1>
+            <h2>{{book.data.authur}}</h2>
+            <h3>{{book.data.edition}}</h3>
+            <a class="btn btn-info" routerLink="/book/{{book.id}}">Edit Book</a>
+            <button class="btn btn-danger btn-sm" (click)="onDelete(book.id)">Delete Book</button>
+        </div>
+        <hr>
+    </div>
+    
+    </div>
